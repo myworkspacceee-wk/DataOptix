@@ -1456,7 +1456,7 @@
                 </div>
                 
                 <div class="contact-form">
-                    <form id="contactForm" name="dataoptix-contact-form">
+                    <!-- <form id="contactForm" name="dataoptix-contact-form" method="POST" data-netlify="true" onSubmit="submit">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
@@ -1506,6 +1506,61 @@
                         </div>
                         
                         <button type="submit" class="btn btn-primary">Request Smart Hands Support</button>
+                    </form> -->
+                    <form id="contactForm" name="dataoptix-contact-form" method="POST" data-netlify="true" onSubmit="submit">
+                        <input type="hidden" name="form-name" value="contact">
+
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" name="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" name="company" class="form-control" placeholder="Enter your company name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Service Interest</label>
+                            <select name="service" class="form-control" required>
+                                <option value="">Select a service</option>
+                                <option value="smart-hands">Smart Hands Support</option>
+                                <option value="infrastructure">Infrastructure Management</option>
+                                <option value="rma">RMA & Logistics</option>
+                                <option value="payg">Pay-As-You-Go</option>
+                                <option value="retainer">Block Hour Retainer</option>
+                                <option value="project">Project-Based</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Data Centre Location</label>
+                            <input type="text" name="location" class="form-control" placeholder="Enter your data centre location">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Urgency Level</label>
+                            <select name="urgency" class="form-control">
+                                <option value="standard">Standard (Next Business Day)</option>
+                                <option value="priority">Priority (4-hour response)</option>
+                                <option value="emergency">Emergency (2-hour response)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Service Requirements</label>
+                            <textarea name="message" class="form-control" placeholder="Describe your requirements" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            Request Smart Hands Support
+                        </button>
                     </form>
                 </div>
             </div>
